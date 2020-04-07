@@ -1,0 +1,40 @@
+<!-- <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let s of statusList" [value]="s.name">
+        {{s.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+<div class="search-wrapper" (click)="statusToggleOn = false" (click)="majorToggleOn = false"></div>
+<div class="search">
+    <div class="status">
+        <div class="label">Status</div>
+        <div class="input" (click)="statusToggleOn = !statusToggleOn" (click)="majorToggleOn = false"><div *ngIf="statusValue == null"><i class="material-icons">expand_more</i></div> {{ statusValue }}</div>
+        <div *ngIf="statusToggleOn == true">
+            <div class="status_toggle">
+                <div *ngFor="let s of statusList">
+                    <div class="status_toggle__item" (click)="selectedStatus(s.name)">
+                        {{s.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="status">
+        <div class="label">Major</div>
+        <div class="input" (click)="majorToggleOn = !majorToggleOn" (click)="statusToggleOn = false"><div *ngIf="majorValue == null"><i class="material-icons">expand_more</i></div> {{ majorValue }}</div>
+        <div *ngIf="majorToggleOn == true">
+            <div class="status_toggle">
+                <div *ngFor="let m of majorList">
+                    <div class="status_toggle__item" (click)="selectedMajor(m.name)">
+                        {{m.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="search_button"><div (click)="onSearch(statusValue, majorValue)">Search</div></div>
+</div>

@@ -1,0 +1,27 @@
+.program-item {
+    background: #fff;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.program-item:hover {
+    grid-template-columns: 100px 1fr;
+    transition: 0.2s;
+}
+.program-item_title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.program-item_text {
+    color: #868686;
+}
+.program-item_box {
+    min-height: 100px;
+    width: 100%;
+    background: #DBEFD4;
+}
+.program-item_right {
+    padding: 1rem;
+}

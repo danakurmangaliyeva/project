@@ -1,0 +1,22 @@
+.details {
+    padding: 3rem 22rem;
+}
+.details_header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+.details_header__box {
+    height: 100px;
+    background: #DBEFD4;
+}
+.details_header__right {
+    padding: 1rem 0 0 1rem
+}
+.details_header__right___title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.details_header__right___text {
+    color: #868686;
+    line-height: 24px;
+}

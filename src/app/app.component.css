@@ -1,0 +1,36 @@
+.header {
+    display: grid;
+    grid-template-columns: 20rem 1fr 20rem;
+    height: 100px;
+    padding: 0 2rem;
+}
+.logo {
+    background: #DBEFD4;
+    display: grid;
+    align-items: center;
+    font-size: 49px;
+    font-weight: bold;
+    justify-content: center;
+}
+.header_login {
+    justify-content: end;
+    display: grid;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.header_login div {
+    height: 48px;
+    background: #F9F9F9;
+    display: grid;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    font-weight: bold;
+    cursor: pointer;
+}
+.header_login div:hover {
+    background: rgb(235, 235, 235);
+    transition: 0.2s;
+}
