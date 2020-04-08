@@ -72,3 +72,14 @@
 .search_button div:active {
     background: rgba(41, 163, 0, 0.336);
 }
+@media (max-width: 1250px) {
+    .search {
+        grid-gap: 1rem;
+    }
+}
+@media (max-width: 620px) {
+    .search {
+        grid-template-rows: 1fr 1fr auto 1fr;
+        grid-template-columns: 1fr;
+    }
+}

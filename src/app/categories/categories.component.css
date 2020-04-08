@@ -1,3 +1,15 @@
 .search {
     padding: 0 22rem;
 }
+@media (max-width: 1250px) {
+    .search {
+        padding: 1rem;
+    }
+}
+@media (max-width: 620px) {
+    .header_buttons {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}

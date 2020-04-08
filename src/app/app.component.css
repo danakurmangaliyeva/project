@@ -19,6 +19,24 @@
     position: relative;
     z-index: 2;
 }
+.right {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+}
+.header_signup {
+    display: grid;
+    color: #868686;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.1s;
+    justify-self: end;
+}
+.header_signup:hover {
+    color: #000;
+    transition: 0.1s;
+}
 .header_login div {
     height: 48px;
     background: #F9F9F9;
@@ -33,4 +51,27 @@
 .header_login div:hover {
     background: rgb(235, 235, 235);
     transition: 0.2s;
+}
+@media (max-width: 1250px) {
+    .header {
+        padding: 0 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .header_signup {
+        justify-self: center;
+    }
+    .header_login {
+        justify-self: center;
+    }
+}
+@media (max-width: 620px) {
+    .header {
+        grid-template-columns: auto auto 1fr;
+        padding: 0;
+    }
 }

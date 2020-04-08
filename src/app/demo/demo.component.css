@@ -81,3 +81,21 @@
     align-self: flex-end;
     color: #868686;
 }
+@media (max-width: 1250px) {
+    .header {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .demo {
+        padding: 1rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 620px) {
+    .header_buttons {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}

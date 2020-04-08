@@ -1,0 +1,40 @@
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+form {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+}
+.label {
+    font-size: 12px;
+}
+button {
+    margin-top: 10px;
+    border: none;
+    height: 48px;
+    background: #F9F9F9;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.1s;
+    cursor: pointer;
+}
+button:hover {
+    background: #DBEFD4;
+    transition: 0.1s;
+}

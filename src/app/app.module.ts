@@ -11,7 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AcademListComponent } from './academ-list/academ-list.component';
 import { ProgramItemComponent } from './program-item/program-item.component';
-import { ProgramDetailsComponent } from './program-details/program-details.component'
+import { ProgramDetailsComponent } from './program-details/program-details.component';
+import { LoginComponent } from './login/login.component';
+import { SingupComponent } from './singup/singup.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -21,14 +25,18 @@ import { ProgramDetailsComponent } from './program-details/program-details.compo
     SearchComponent,
     AcademListComponent,
     ProgramItemComponent,
-    ProgramDetailsComponent
+    ProgramDetailsComponent,
+    LoginComponent,
+    SingupComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatSelectModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

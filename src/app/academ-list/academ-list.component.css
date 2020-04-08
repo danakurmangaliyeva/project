@@ -4,3 +4,8 @@
     position: relative;
     z-index: 2;
 }
+@media (max-width: 1250px) {
+    .academ {
+        padding: 1rem;
+    }
+}

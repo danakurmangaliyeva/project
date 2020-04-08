@@ -20,3 +20,8 @@
     color: #868686;
     line-height: 24px;
 }
+@media (max-width: 1250px) {
+    .details {
+        padding: 3rem 1rem;
+    }
+}

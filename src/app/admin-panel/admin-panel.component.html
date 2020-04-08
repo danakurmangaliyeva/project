@@ -1,0 +1,24 @@
+<div class="admin">
+    <form>
+        <div class="title">Adding new program</div>
+        <div class="item">
+            <div class="label">Name</div>
+            <input type="text" name="name" [(ngModel)]="program.name">
+        </div>
+        <div class="item">
+            <div class="label">Description</div>
+            <textarea cols="30" rows="10" name="description" [(ngModel)]="program.description"></textarea>
+        </div>
+        <div class="filter">
+            <div class="item">
+                <div class="label">Status</div>
+                <input type="text" name="status" [(ngModel)]="program.status">
+            </div>
+            <div class="item">
+                <div class="label">Major</div>
+                <input type="text" name="major" [(ngModel)]="program.major">
+            </div>
+        </div>
+        <button (click)="onCreate()">+ new program</button>
+    </form>
+</div>
