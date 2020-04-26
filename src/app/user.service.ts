@@ -7,16 +7,16 @@ import { IUser } from './IUser'
   providedIn: 'root'
 })
 export class UserService {
-  private _url = 'http://localhost:8000/api/user/'
+  private _url = 'http://localhost:8000/api/'
   httpHeaders = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})}
   constructor(private http: HttpClient) { }
 
   Login(user: IUser): Observable<IUser> {
-    return this.http.post<IUser>(this._url + 'login', user, this.httpHeaders)
+    return this.http.post<IUser>(this._url + 'login/', user, this.httpHeaders)
   }
 
   SignUp(user: IUser): Observable<IUser> {
-    return this.http.post<IUser>(this._url + 'register', user, this.httpHeaders)
+    return this.http.post<IUser>(this._url + 'register/', user, this.httpHeaders)
   }
 
   

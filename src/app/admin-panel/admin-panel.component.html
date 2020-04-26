@@ -7,7 +7,7 @@
         </div>
         <div class="item">
             <div class="label">Description</div>
-            <textarea cols="30" rows="10" name="description" [(ngModel)]="program.description"></textarea>
+            <textarea cols="30" rows="10" name="text" [(ngModel)]="program.text"></textarea>
         </div>
         <div class="filter">
             <div class="item">
@@ -19,6 +19,20 @@
                 <input type="text" name="major" [(ngModel)]="program.major">
             </div>
         </div>
-        <button (click)="onCreate()">+ new program</button>
+        <div *ngIf="!editable">
+            <button (click)="onCreate()">+ new program</button>
+        </div>
+        <div *ngIf="editable">
+            <button (click)="onUpdate()">Update</button>
+        </div>
     </form>
+    <div class="programs_list">
+        <div *ngFor="let p of programs">
+            <div class="programs_list__item">
+                <h4>{{p.name}}</h4>
+                <button (click)="onDelete(p.id)">delete</button>
+                <button (click)="onEdit(p.id)">edit</button>
+            </div>
+        </div>
+    </div>
 </div>

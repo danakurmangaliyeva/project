@@ -20,12 +20,11 @@ export class AcademListComponent implements OnInit {
 
       if(param.status == 'all') statusParam = ""; else  statusParam = param.status
       if(param.major == 'all') majorParam = ""; else  majorParam = param.major
-
-      console.log(statusParam, majorParam)
       
       this.programService.getProgram()
         .subscribe(data => {
-          this.programList = data.filter(o => o.status.includes(statusParam) && o.major.includes(majorParam))
+          this.programList = data.filter(o => o.status.name.includes(statusParam) && o.major.name.includes(majorParam))
+          console.log(this.programList)
         })
     })
   }

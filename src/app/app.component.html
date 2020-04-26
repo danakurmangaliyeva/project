@@ -5,8 +5,15 @@
     <div class="header_signup">
       <div routerLink="/signup">Sing Up</div>
     </div>
-    <div class="header_login">
-      <div routerLink="/login">Log In</div>
+    <div *ngIf="!logged">
+      <div class="header_login">
+        <div routerLink="/login">Log In</div>
+      </div>
+    </div>
+    <div *ngIf="logged">
+      <div class="header_login">
+        <div (click)="onLogout()">Log Out</div>
+      </div>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
 })
 export class SingupComponent implements OnInit {
   signup = {
-    email: '',
+    username: '',
     password: '',
     password2: ''
   }

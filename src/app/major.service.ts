@@ -7,7 +7,7 @@ import { IMajor } from 'src/assets/interfaces/major';
   providedIn: 'root'
 })
 export class MajorService {
-  private _url: string = "assets/data/major.json"
+  private _url: string = "http://localhost:8000/api/major"
   constructor(private http: HttpClient) { }
 
   getMajors(): Observable<IMajor[]> {

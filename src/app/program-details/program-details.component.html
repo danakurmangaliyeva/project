@@ -4,6 +4,12 @@
         <div class="details_header__right">
             <div class="details_header__right___title">{{ program.name }}</div>
             <div class="details_header__right___text">{{ program.text }}</div>
+            <div class="details_reqs">
+                <div *ngFor="let r of reqs">
+                    {{r}}
+                </div>
+            </div>
         </div>
     </div>
+
 </div>

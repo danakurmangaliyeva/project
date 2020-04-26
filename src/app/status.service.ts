@@ -7,7 +7,7 @@ import { IStatus } from 'src/assets/interfaces/status';
   providedIn: 'root'
 })
 export class StatusService {
-  private _url: string = "assets/data/status.json"
+  private _url: string = "http://localhost:8000/api/status/"
   constructor(private http: HttpClient) { }
 
   getStatuses(): Observable<IStatus[]> {

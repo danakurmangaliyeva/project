@@ -7,7 +7,7 @@ import { IProgram } from 'src/assets/interfaces/program';
   providedIn: 'root'
 })
 export class ProgramService {
-  private _url: string = "assets/data/program.json"
+  private _url: string = "http://localhost:8000/api/program/"
   private httpHeaders = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
@@ -19,5 +19,13 @@ export class ProgramService {
   
   setProgram(program): Observable<IProgram> {
     return this.http.post<IProgram>(this._url, program, this.httpHeaders)
+  }
+
+  updateProgram(program): Observable<IProgram> {
+    return this.http.put<IProgram>(this._url + program.id + '/', program, this.httpHeaders)
+  }
+
+  deleteProgram(id): Observable<any> {
+    return this.http.delete<any>(this._url + id + '/')
   }
 }
