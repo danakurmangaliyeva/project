@@ -1,7 +1,7 @@
 <div class="search-wrapper" (click)="statusToggleOn = false" (click)="majorToggleOn = false"></div>
 <div class="search">
     <div class="status">
-        <div class="label">Status</div>
+        <div class="label">Курс</div>
         <div class="input" (click)="statusToggleOn = !statusToggleOn" (click)="majorToggleOn = false"><div *ngIf="statusValue == null"><i class="material-icons">expand_more</i></div> {{ statusValue }}</div>
         <div *ngIf="statusToggleOn == true">
             <div class="status_toggle">
@@ -15,7 +15,7 @@
     </div>
 
     <div class="status">
-        <div class="label">Major</div>
+        <div class="label">Факультет</div>
         <div class="input" (click)="majorToggleOn = !majorToggleOn" (click)="statusToggleOn = false"><div *ngIf="majorValue == null"><i class="material-icons">expand_more</i></div> {{ majorValue }}</div>
         <div *ngIf="majorToggleOn == true">
             <div class="status_toggle">
@@ -28,5 +28,5 @@
         </div>
     </div>
     <div></div>
-    <div class="search_button"><div (click)="onSearch(statusValue, majorValue)">Search</div></div>
+    <div class="search_button"><div (click)="onSearch(statusValue, majorValue)">Поиск</div></div>
 </div>

@@ -1,18 +1,21 @@
 <div class="signup">
-    <form>
-        <div class="title">Sing Up</div>
-        <div class="item">
-            <div class="label">Email</div>
-            <input type="text" name="username" [(ngModel)]="signup.username">
+    <div class="signup-tint">
+        <div class="signup-form">
+            <h2 class="signup-title">Регистрация</h2>
+            <div class="signup-item">
+                <div class="label">Эл.почта</div>
+                <input type="text" name="username" [(ngModel)]="signup.username">
+            </div>
+            <div class="signup-item">
+                <div class="label">Пароль</div>
+                <input type="password" name="password" [(ngModel)]="signup.password">
+            </div>
+            <div class="signup-item">
+                <div class="label">Подтвердите пароль</div>
+                <input type="password" name="password2" [(ngModel)]="signup.password2">
+            </div>
+            <button (click)="onSignUp()">Зергистрироваться</button>
+            <a routerLink="/login">У вас уже есть аккаунт? Войдите</a>
         </div>
-        <div class="item">
-            <div class="label">Password</div>
-            <input type="password" name="password" [(ngModel)]="signup.password">
-        </div>
-        <div class="item">
-            <div class="label">Confirm password</div>
-            <input type="password" name="password2" [(ngModel)]="signup.password2">
-        </div>
-        <button (click)="onSignUp()">Sign up</button>
-    </form>
+    </div>
 </div>

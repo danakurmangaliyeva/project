@@ -1,6 +1,25 @@
 <div class="admin">
-    <form>
-        <div class="title">Adding new program</div>
+    <div class="program-list">
+        <h2>Major List</h2>
+        <table>
+            <tr class="table-tr">
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            <tr class="table-tr" *ngFor="let p of programs">
+                <td>{{p.name}}</td>
+                <td>{{p.text}}</td>
+                <td>
+                    <button class="deleteBtn" (click)="onDelete(p.id)">delete</button>
+                    <button class="editBtn" (click)="onEdit(p.id)">edit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="edit-form">
+        <h2 class="edit-title">Adding new program</h2>
         <div class="item">
             <div class="label">Name</div>
             <input type="text" name="name" [(ngModel)]="program.name">
@@ -20,19 +39,10 @@
             </div>
         </div>
         <div *ngIf="!editable">
-            <button (click)="onCreate()">+ new program</button>
+            <button class="newBtn" (click)="onCreate()">+ new program</button>
         </div>
         <div *ngIf="editable">
-            <button (click)="onUpdate()">Update</button>
-        </div>
-    </form>
-    <div class="programs_list">
-        <div *ngFor="let p of programs">
-            <div class="programs_list__item">
-                <h4>{{p.name}}</h4>
-                <button (click)="onDelete(p.id)">delete</button>
-                <button (click)="onEdit(p.id)">edit</button>
-            </div>
+            <button class="editBtn mt20" (click)="onUpdate()">Update</button>
         </div>
     </div>
 </div>

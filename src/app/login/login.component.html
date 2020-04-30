@@ -1,14 +1,17 @@
 <div class="login">
-    <form>
-        <div class="title">Log In</div>
-        <div class="item">
-            <div class="label">Email</div>
-            <input type="text" name="username" [(ngModel)]="login.username">
+    <div class="login-tint">
+        <div class="login-form">
+            <h2 class="login-title">Авторизация</h2>
+            <div class="login-item">
+                <div class="label">Эл.почта</div>
+                <input type="text" name="username" [(ngModel)]="login.username" autocomplete="off">
+            </div>
+            <div class="login-item">
+                <div class="label">Пароль</div>
+                <input type="password" name="password" [(ngModel)]="login.password" autocomplete="off">
+            </div>
+            <button (click)="onLogin()">Войти</button>
+            <a routerLink="/signup">У вас нет аккаунта? Зарегистрируйтесь</a>
         </div>
-        <div class="item">
-            <div class="label">Password</div>
-            <input type="password" name="password" [(ngModel)]="login.password">
-        </div>
-        <button (click)="onLogin()">Log in</button>
-    </form>
+    </div>
 </div>

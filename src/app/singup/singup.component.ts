@@ -18,6 +18,7 @@ export class SingupComponent implements OnInit {
   }
 
   onSignUp(): void {
+    console.log(this.signup)
     this.userService.SignUp(this.signup)
   }
 

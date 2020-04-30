@@ -1,19 +1,17 @@
 <div class="header">
-  <div></div>
-  <div class="logo">academ.</div>
-  <div class="right">
-    <div class="header_signup">
-      <div routerLink="/signup">Sing Up</div>
+  <div routerLink="/demo" class="logo-holder">
+
+  </div>
+  <div class="header-title">
+    <h1>academ.</h1>
+  </div>
+  <div class="academ-header-actions">
+    <div class="header-signup">
+      <div *ngIf="!logged" routerLink="/signup">Sing Up</div>
     </div>
-    <div *ngIf="!logged">
-      <div class="header_login">
-        <div routerLink="/login">Log In</div>
-      </div>
-    </div>
-    <div *ngIf="logged">
-      <div class="header_login">
-        <div (click)="onLogout()">Log Out</div>
-      </div>
+    <div class="header-login">
+      <div *ngIf="!logged" routerLink="/login">Log In</div>
+      <div *ngIf="logged" (click)="onLogout()">Log Out</div>
     </div>
   </div>
 </div>

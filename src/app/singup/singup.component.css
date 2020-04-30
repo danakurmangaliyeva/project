@@ -1,40 +1,66 @@
 .signup {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background: #fff;
-    display: grid;
-    align-items: center;
+    margin-top: -80px;
+    background-image: url("../../assets/img/main-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.signup-tint {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21,30,63,0.9);
+    display: flex;
     justify-content: center;
-    z-index: 4;
+    align-items: center;
 }
-.title {
-    font-size: 24px;
-    font-weight: bold;
+.signup-form {
+    background-color: #DBEFD4;
+    padding: 40px 40px;
 }
-form {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 10px;
+.signup-title {
+    color: #151E3F;
+    margin-bottom: 40px;
 }
-.label {
-    font-size: 12px;
-}
-button {
-    margin-top: 10px;
+input {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    background-color: #DBEFD4;
+    padding: 4px;
+    outline: none;
     border: none;
-    height: 48px;
-    background: #F9F9F9;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: 0.1s;
-    cursor: pointer;
+    border-bottom: 2px white solid !important;
 }
-button:hover {
-    background: #DBEFD4;
-    transition: 0.1s;
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #DBEFD4 inset !important;
+}
+input:focus {
+    outline: none !important;
+    border-bottom: 2xp #151E3F solid;
+}
+
+.signup-item {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    background-color: #151E3F;
+    color: white;
+    border: none;
+    font-size: 20px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+a {
+    color: #151E3F;
+    font-size: 16px;
+    text-decoration: none;
 }
